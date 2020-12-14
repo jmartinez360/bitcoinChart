@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+
+dependencies {
+    implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.KOTLINX_COROUTINES)
+    api(Dependencies.RETROFIT)
+    implementation(Dependencies.RETROFIT_CONVERTER_GSON)
+    implementation(Dependencies.DAGGER_ANDROID)
+
+    implementation project(ProjectModules.DATA)
+
+    testImplementation(TestDependencies.JUNIT)
+    testImplementation(TestDependencies.MOCKITO)
+    testImplementation(TestDependencies.KOTLIN_COROUTINES_TEST)
+
+    kapt(Dependencies.DAGGER_COMPILER)
+    kapt(Dependencies.DAGGER_PROCESSOR)
+
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

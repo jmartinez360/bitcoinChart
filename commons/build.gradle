@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+dependencies {
+    implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.ANDROIDX_CORE)
+    implementation(Dependencies.ANDROIDX_APPCOMPAT)
+    implementation(Dependencies.ANDROIDX_LIFECYCLE_VIEWMODEL)
+}

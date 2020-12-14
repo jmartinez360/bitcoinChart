@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:checkable="true"
+    app:chipBackgroundColor="@drawable/filter_chip_background"
+    app:checkedIconEnabled="false"
+    android:fontFamily="@font/roboto_medium"
+    android:textColor="@drawable/filter_chip_text_background"
+    app:rippleColor="@color/selectedChip"
+    tools:text="filter" />

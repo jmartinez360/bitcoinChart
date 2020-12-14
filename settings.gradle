@@ -1,0 +1,7 @@
+include ':commons'
+include ':features:marketChart'
+include ':libraries:data'
+include ':libraries:domain'
+include ':libraries:data_api'
+include ':app'
+rootProject.name = "BitcoinChart"

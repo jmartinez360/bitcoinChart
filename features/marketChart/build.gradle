@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation(Dependencies.KOTLIN)
+    implementation(Dependencies.KOTLINX_COROUTINES)
+
+    implementation(Dependencies.ANDROIDX_CORE)
+    implementation(Dependencies.ANDROIDX_APPCOMPAT)
+    implementation(Dependencies.ANDROIDX_LIFECYCLE_VIEWMODEL)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.DAGGER_ANDROID)
+    implementation(Dependencies.ANDROID_CHART)
+    implementation(Dependencies.ANDROID_MATERIAL)
+
+    implementation project(ProjectModules.DOMAIN)
+    implementation project(ProjectModules.DATA_API)
+    implementation project(ProjectModules.DATA)
+    implementation project(ProjectModules.COMMONS)
+
+    testImplementation(TestDependencies.JUNIT)
+    testImplementation(TestDependencies.MOCKITO)
+    testImplementation(TestDependencies.KOTLIN_COROUTINES_TEST)
+    testImplementation(TestDependencies.ANDROIDX_CORE_TEST)
+
+    androidTestImplementation(TestDependencies.ANDROID_TEST_ESPRESSO)
+    androidTestImplementation(TestDependencies.ANDROID_JUNIT)
+    androidTestImplementation(TestDependencies.RULES)
+    androidTestImplementation(TestDependencies.FRAGMENT_TEST)
+
+    kapt(Dependencies.DAGGER_COMPILER)
+    kapt(Dependencies.DAGGER_PROCESSOR)
+
+}

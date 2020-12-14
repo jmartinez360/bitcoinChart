@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gridColor">#eeeeee</color>
+    <color name="charLine">#6200EE</color>
+    <color name="axisLine">#e0e0e0</color>
+    <color name="labelColor">#757575</color>
+    <color name="background">#ffffff</color>
+    <color name="chartTitle">#000000</color>
+    <color name="markerLabelStrong">#000000</color>
+    <color name="selectedChip">#1A6200EE</color>
+    <color name="selectedChipText">#6200EE</color>
+    <color name="unselectedChipText">#000000</color>
+    <color name="unselectedChip">#e0e0e0</color>
+</resources>
